@@ -15,7 +15,6 @@ class ExchangeRateProvider(models.Model):
 
 # Create your models here.
 class ExchangeRate(models.Model):
-
     base_currency = models.CharField(max_length=20)
     currency = models.CharField(max_length=20)
 
