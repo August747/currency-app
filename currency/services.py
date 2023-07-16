@@ -20,7 +20,7 @@ class ExchangeRatesService:
 
         dates_to_fetch = [(start_date + datetime.timedelta(days=i)) for i in range((end_date - start_date).days + 1)]
 
-        with ThreadPoolExecutor(max_workers=4) as executor:
+        with ThreadPoolExecutor(max_workers=5) as executor:
             rates = list(executor.map(self.get_rate_for_date, dates_to_fetch))
 
         return rates
